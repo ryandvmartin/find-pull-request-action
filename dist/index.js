@@ -2122,9 +2122,10 @@ const main = async () => {
     ? res.data.length && res.data.filter(pr => pr.user.login === author)[0]
     : res.data.length && res.data[0]
 
-  core.debug(`pr: ${JSON.stringify(pr, null, 2)}`)
+  core.info(`pr: ${JSON.stringify(pr, null, 2)}`)
   core.setOutput('number', pr ? pr.number : '')
   core.setOutput('head-sha', pr ? pr.head.sha : '')
+  core.setOutput('draft', pr ? pr.draft : '')
 }
 
 main().catch(err => core.setFailed(err.message))
