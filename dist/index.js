@@ -2318,7 +2318,7 @@ const main = async () => {
     ? res.data.length && res.data.filter(pr => pr.user.login === author)[0]
     : res.data.length && res.data[0]
 
-  core.debug(`pr: ${JSON.stringify(pr, null, 2)}`)
+  core.info(`pr: ${JSON.stringify(pr, null, 2)}`)
   core.setOutput('number', pr ? pr.number : '')
   core.setOutput('title', pr ? pr.title : '')
   core.setOutput('url', pr ? pr.url : '')
@@ -2327,6 +2327,7 @@ const main = async () => {
   core.setOutput('base-ref', pr ? pr.base.ref : '')
   core.setOutput('base-sha', pr ? pr.base.sha : '')
   core.setOutput('base-repo', pr ? pr.base.repo.full_name : '')
+  core.setOutput('draft', pr ? pr.draft : '')
 }
 
 main().catch(err => core.setFailed(err.message))
