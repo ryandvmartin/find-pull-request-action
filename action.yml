@@ -42,6 +42,9 @@ outputs:
     description: The Pull Request's number if one was found (e.g. '345' for #345)
   head-sha:
     description: The Pull Request's head sha if one was found
+  draft:
+    description: 'Find PRs that are marked as draft'
+
 runs:
   using: 'node12'
   main: 'dist/index.js'
