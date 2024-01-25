@@ -57,6 +57,7 @@ const main = async () => {
   core.setOutput('base-ref', pr ? pr.base.ref : '')
   core.setOutput('base-sha', pr ? pr.base.sha : '')
   core.setOutput('base-repo', pr ? pr.base.repo.full_name : '')
+  core.setOutput('state', pr ? pr.state : '')
   core.setOutput('draft', pr ? pr.draft : '')
 }
 
