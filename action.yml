@@ -60,5 +60,5 @@ outputs:
     description: 'Find PRs that are marked as draft'
 
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
