@@ -17,7 +17,28 @@ steps:
       sha: ${{ steps.find-pull-request.outputs.head-sha }}
 ```
 
-Currently this will find a single open PR based on given `branch` input. For more options please open an issue.
+Query pull requests based on these inputs:
+- `branch`
+- `base`
+- `author`
+- `state`
+- `repo`
+- `sort`
+- `direction`
+- `labels`
+
+For the first matching pull request, these outputs will be set:
+- `number`
+- `title`
+- `url`
+- `head-ref`
+- `head-sha`
+- `base-ref`
+- `base-sha`
+- `base-repo`
+- `state`
+
+See [action.yml](action.yml) for more details.
 
 ## Related
 
